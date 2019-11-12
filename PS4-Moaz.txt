@@ -1,0 +1,58 @@
+My experiment for my masters thesis consists of 3 sections: pre-testing, Ideal Observer testing, and finally the experiment that the participants will do. 
+
+I will be using MATLAB for all 3 sections.
+
+For my pre-testing, I will be using the cambridge face memory test (CFMT) to test for the other-race effect. I will be using 2 versions of the CFMT (white and east asian versions) 
+and will be testing them on both white and east asian participants. This part of the experiment will look something like this: 
+
+Run CFMT-Asian 
+
+Accuracy = X
+
+Run CFMT-White 
+
+Accuracy = Y
+
+For White participants: 
+
+If Y>=X 
+disp('Eligible!') 
+else 
+disp('Not eligible')
+end
+
+For Asian participants: 
+
+If X>=Y
+disp('Eligible!') 
+else 
+disp('Not eligible')
+end
+
+After collecting enough eligible participants, I now will need to test my stimuli on an "ideal observer". My experiment will be a task whereby the participants will see pairs of faces 
+(either white vs. white, white vs. asian, or asian vs. asian) and they will be asked to rate the similariy of the faces on a scale from 1-7. What an ideal observer does is it gives me 
+the objective differences between each presented face using pixel-wise comparison. If the results of the ideal observer are accurate enough (usually aim for atleat 90% accuracy), then 
+my stimuli quality is good enough for participant testing. 
+
+Run ideal observer 
+
+Establish paramters (dimensions, permutations, minimum number of pixels to include as a signficiant dimension)
+load stimuli 
+find the largest common black background among the images, and remove it before running ideal observer.
+Reconstruct ideal observer results. 
+Obtain accuracies from ideal observer. 
+
+Once my stimuli is ready to go, I can code and run my experiment on participants. My study will take the behavioral results obtained from participants and attempt to reconstruct the 
+face stimuli of white and asian faces from white and asian participants, to further establish the neural pipeline of the other race effect and establish a framework for stimuli reconstruction and race.
+
+Run ORE-reconstruction study.
+load stimuli.
+Display stimuli 2 at a time with a 7 point scale (not sure how to do that yet, will be using psychtoolbox). 
+Save data.
+
+Collect data and analyze it in a similar fashion to the idea observer.
+
+
+
+
+
